@@ -1,0 +1,28 @@
+tr td{
+    background-color: #C9C988;
+    font-size: 9pt;
+    line-height: 130%;
+}
+tr td.celdaX{
+    background-color: #275211;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #212B5F;
+}
+@media( min-width: 500px) {
+	tr td{
+    font-size: 11pt;
+    
+  }
+}
+@media( min-width: 1000px) {
+	tr td{
+    font-size: 12pt;
+
+  }
+}
+/*
+tr td.celdaNoX{
+    background-color: #C9C988;
+    line-height: 30%;
+}
+*/
