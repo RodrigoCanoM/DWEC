@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="author" content="LordCano" />
+		<meta charset="utf-8" />
+		<title>Práctica 5-01 </title>
+		<style type="text/css">
+			body {
+				background-color:blue;
+				color:white;
+				font-family:calibri;
+				font-size:12pt;
+				line-height:1.75em;
+				margin:30px;
+				
+			}
+			fieldset {
+				width:300px;
+				float:left;
+				position: relative;
+				top:30px;
+			}
+
+			input[type="text"]   {
+				position:relative;
+				
+			}
+			.par {
+				position:absolute;
+				left:150px;
+			}
+
+		</style>
+		<script src="js/validaciones.js" type="text/javascript">
+			
+		</script>
+	</head>
+	<body>
+		<form name="primero">
+			<div>
+				<label for="nombre">Razón Social/Apellidos y Nombre</label>
+				<input type="text" name="nombre"/> <br />
+				<label for="codigo">Código de la Empresa</label>
+				<input type="text" name="codigo" /> <br />
+				<label for="nif_cif">CIF/NIF de la Empresa</label>
+				<input type="text" name="nif_cif"/> <br />
+			</div>
+			<br />
+			<div>
+				<fieldset >
+					<legend>Tipo de persona</legend>
+					<input type="radio" value="juridica" name="persona"  /> Jurídica <br/>
+					<input type="radio" value="fisica" name="persona"  /> Física </br>
+				</fieldset>
+			</div>
+			<br/>
+			<div>
+				<fieldset>
+					<legend>Aficiones</legend>
+					<input type="checkbox" value="viajar" name="viajar" /> Viajar
+					<span class="par"><input type="checkbox"  value="leer" name="leer" /> Leer </span></br>
+					<input type="checkbox" value="musica" name="musica" /> Escuchar música
+					<span class="par"><input type="checkbox" value="cine" name="cine" /> Ir al cine </span></br>
+			 		<input type="checkbox" value="deporte" name="deporte" /> Hacer deporte
+					<span class="par"><input type="checkbox" value="cena" name="cena" /> Salir a cenar </span></br>
+				</fieldset>
+			</div>
+			<a href="" >Instituto</a> <br />
+			<input type="submit" value="Enviar" />
+			<input type="reset" value="Limpiar" />
+		</form>
+		
+	</body>
+</html>
