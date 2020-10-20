@@ -74,16 +74,30 @@ function esCif(cadena)
     {
         var dig7 = cadena.substr(1,7);
         var suma=0;
-        alert ("control2");
+        //alert (3%2);
+        //alert (dig7);
         var i;
-        for (i=1; i<dig7.length;i++){//mal
-            dig=dig7.substr(i-1,1);
-            alert (ig7.length);//mal
-            if (i%2!=0)//Si es impar entra
+        var dig;
+        for ( i=1; i < dig7.length; i++){//mal
+            //alert(i);
+            //alert (dig7.length);
+            dig=dig7.substr((i-1),1);
+            //alert (ig7.length);//mal
+            alert(dig);
+            if (i%2 != 0)//Si es impar entra
             {
+                
                 dig*=2;
-                if (dig>9)
-                    dig=dig.substr(0,1)+dig.substr(1,1);//suma los digitos
+                alert(dig);
+                if (dig > 9)
+                   { alert("dddd");
+                   let dig1=(parseInt)(dig.substr(0,1));
+                   alert (dig1);
+                   let dig2=dig.substr(1,1);
+                       dig=dig1+dig2;//suma los digitos
+                       alert("sssss");
+                   }
+                   alert(dig);
             }
             //suma los par y los impares*2
             suma+=dig;
@@ -102,6 +116,9 @@ function esCif(cadena)
     }
     return 3;
 }
+
+
+
 
 
 
