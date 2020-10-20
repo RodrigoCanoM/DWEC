@@ -5,7 +5,7 @@ function cargado(){
 
 function nif_cif()
 {
-    var cod=esNif(document.primero.nif_cif.value.toString().toUpperCase());
+    //var cod=esNif(document.primero.nif_cif.value.toString().toUpperCase());
     var code=esCif(document.primero.nif_cif.value.toString().toUpperCase());
     if (code<5 && code>0)
     alert (code);
@@ -65,9 +65,9 @@ function esNif(cadena)
 function esCif(cadena)
 {
     // 1 forma -> 1 letra - 7 digitos - un numero de control
-    var formato1 = /^[A-H,J,U,V]{1}[0-9]{7}[0-9]{1}$/i;
+    var formato1 = /^[A-H,J,U,V]{1}[0-9]{7}[0-9]$/i;
     // 2 forma -> 1 letra - 7 digitos - una letra de control
-    var formato2 = /^[P,Q,R,S,W]{1}[0-9]{7}[A-J]{1}$/i;
+    var formato2 = /^[P,Q,R,S,W]{1}[0-9]{7}[A-J]$/i;
     var letrasC="JABCDEFGHI";
     alert ("control");
     if (formato1.test(cadena) || formato2.test(cadena))
@@ -78,11 +78,11 @@ function esCif(cadena)
         //alert (dig7);
         var i;
         var dig;
-        for ( i=1; i < dig7.length; i++){//mal
+        for ( i=1; i <= dig7.length; i++){
             //alert(i);
             //alert (dig7.length);
-            dig=dig7.substr((i-1),1);
-            //alert (ig7.length);//mal
+            dig=dig7.substr((i-1),1);//mal
+            //alert (ig7.length);
             alert(dig);
             if (i%2 != 0)//Si es impar entra
             {
@@ -90,14 +90,14 @@ function esCif(cadena)
                 dig*=2;
                 alert(dig);
                 if (dig > 9)
-                   { alert("dddd");
-                   let dig1=(parseInt)(dig.substr(0,1));
-                   alert (dig1);
-                   let dig2=dig.substr(1,1);
-                       dig=dig1+dig2;//suma los digitos
+                   { 
+                       alert("dddd");
+                       dig=dig.toString();
+                       alert(dig);
+                       dig=(parseInt)(dig.charAt(0))+(parseInt)(dig.charAt(1));//suma los digitos
                        alert("sssss");
                    }
-                   alert(dig);
+                alert(dig);
             }
             //suma los par y los impares*2
             suma+=dig;
@@ -116,9 +116,3 @@ function esCif(cadena)
     }
     return 3;
 }
-
-
-
-
-
-
